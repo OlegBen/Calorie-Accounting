@@ -1,0 +1,215 @@
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*Картинка еды*/
+
+.foodPicture {
+    height: 100px;
+    width: 100px;
+}
+
+/*Основные блоки*/
+
+.foodList {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.centerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+/*Обёртка для списка последней добавленной еды*/
+
+.wrapper-lastEatenFoods {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Списки с едой*/
+
+#sortable1, #sortable2 {
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    width: 135px;
+    height: 500px;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 5px 0 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*Элементы еды*/
+
+#sortable1 li, #sortable2 li, .lastEatenFoods div {
+    margin: 0 5px 5px 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 120px;
+}
+
+/*Последняя добавленная еда(список)*/
+
+.lastEatenFoods  {
+    border: 1px solid skyblue;
+    border-radius: 5px;
+    width: 100%;
+    height: 120px;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto;
+    display: inline-flex;
+    padding-bottom: 10px;
+}
+
+/*Блок с кнопками действия*/
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Кнопка отправки*/
+
+.pushToServer {
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    margin-top: 10px;
+    color: whitesmoke;
+    transition: 0.3s all;
+}
+.pushToServer:hover {
+    background-color: darkblue;
+}
+
+/*Кнопка показа графика*/
+
+.openCaloriesChart {
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: whitesmoke;
+    transition: 0.3s all;
+}
+.openCaloriesChart:hover {
+    background-color: darkblue;
+}
+
+/*Счётчик калорий*/
+
+.wrapper-caloriesCounter {
+    display: inline-flex;
+}
+
+/*Модальное окно*/
+
+.container-popup {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+.popup {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 185px;
+    width: 285px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #eeeeee;
+    z-index: 2;
+}
+.popup-title {
+    margin-top: -50px;
+    margin-bottom: 40px;
+}
+.popup input[type='number'] {
+    height: 25px;
+    width: 200px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+}
+.popup input[type='number']:focus {
+    border-color: blue;
+}
+.popup-error {
+    color: red;
+}
+.popup-action {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    height: 25px;
+    width: 50px;
+    border: none;
+    border-radius: 2px;
+    background-color: blue;
+    color: #eeeeee;
+    transition: 0.3s all;
+}
+.popup-action:hover {
+    background-color: darkblue;
+}
+
+/*График калорий*/
+
+.wrapper-caloriesChart {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+.caloriesChart {
+    position: relative;
+    height: 60%;
+    width: 60%;
+    border-radius: 10px;
+    background-color: #eeeeee;
+    padding: 10px;
+    z-index: 2;
+}
+#caloriesChart {
+    height: 100%;
+    width: 100%;
+}
+.closeCaloriesChart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    font-weight: bolder;
+    font-size: large;
+    background-color: #eeeeee;
+}

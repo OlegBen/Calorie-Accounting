@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Свинина",
+        "calories": 259,
+        "img": "/pictures/pig.svg"
+    },
+    {
+        "name": "Курица",
+        "calories": 190,
+        "img": "/pictures/fried-chicken.svg"
+    },
+    {
+        "name": "Говядина",
+        "calories": 187,
+        "img": "/pictures/beef.svg"
+    }
+]

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cook</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+
+<main>
+    <div class="foodList">
+        <h3>Список блюд</h3>
+        <ul id="sortable1" class="connectedSortable"></ul>
+    </div>
+    <div class="centerContent">
+        <div class="wrapper-lastEatenFoods">
+            <h3>Ваш прошлый перекус</h3>
+            <div class="lastEatenFoods">
+
+            </div>
+        </div>
+
+        <div class="wrapper-caloriesCounter">
+            <h2>Счётчик калорий: </h2>
+            <h2 class="caloriesCounter">0</h2>
+        </div>
+
+        <div class="actions">
+            <button class="openCaloriesChart">График</button>
+            <button class="pushToServer">Отправить</button>
+        </div>
+    </div>
+    <div class="foodList">
+        <h3>Выбранные блюда</h3>
+        <ul id="sortable2" class="connectedSortable"></ul>
+    </div>
+
+    <div class="container-popup" style="display: none">
+        <div class="popup">
+            <h3 class="popup-title">Сколько грамм вы съели?</h3>
+            <input class="popup-input" type="number" value='0' step="100"/>
+            <small class="popup-error"></small>
+            <button class="popup-action">Ok</button>
+        </div>
+    </div>
+
+    <div class="wrapper-caloriesChart" style="display: none">
+        <div class="caloriesChart">
+            <canvas id="caloriesChart"></canvas>
+            <button class="closeCaloriesChart">X</button>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+
+<script src="js/formProd.js"></script>
+<script src="js/drag&drop.js"></script>
+<script src="js/lastFood.js"></script>
+<script src="js/caloriesChart.js"></script>
+</body>
+</html>
